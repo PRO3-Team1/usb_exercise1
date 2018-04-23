@@ -5,7 +5,7 @@
  * Generated linker script file for LPC4088
  * Created from memory.ldt by FMCreateLinkMemory
  * Using Freemarker v2.3.23
- * MCUXpresso IDE v10.0.2 [Build 411] [2017-07-11]  on 16-Apr-2018 08:40:25
+ * MCUXpresso IDE v10.0.2 [Build 411] [2017-07-11]  on 16-Apr-2018 10:04:52
  */
 
 MEMORY

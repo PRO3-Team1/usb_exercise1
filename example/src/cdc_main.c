@@ -190,7 +190,11 @@ int main(void)
 	while (1) {
 		/* Check if host has connected and opened the VCOM port */
 		if ((vcom_connected() != 0) && (prompt == 0)) {
-			vcom_write("Hello, this is a USB UPPER-to-lower, and lower-to-UPPER character converter\r\n", 77);
+			vcom_write("Hello, this is a USB UPPER-to-", 30);
+			__WFI(); // Wait for interupt, so the endpoint buffer can be send.
+			vcom_write("lower, and lower-to-UPPER char", 30);
+			__WFI();
+			vcom_write("acter converter\r\n", 17);
 			prompt = 1;
 		}
 		/* If VCOM port is opened echo whatever we receive back to host. */
